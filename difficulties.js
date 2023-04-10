@@ -75,7 +75,7 @@ function loadDifficulty(d,sav=true){
  }
  levels = difficulties[di].level
  worldMap = difficulties[di].world_map
- document.body.style.backgroundColor = `${difficulties[di].color}`
+ document.body.style.backgroundColor = `${difficulties[di][options.darkMode?"dark_color":"color"]}`
  document.body.style.opacity = "0%"
  fade.phase = 1
  fade.time = 2
