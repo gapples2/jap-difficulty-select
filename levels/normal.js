@@ -2018,4 +2018,3 @@ difficulties[diff_index["normal"]].level = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
   ]
 ];
-console.log("hi!")

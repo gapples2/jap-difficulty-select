@@ -1052,6 +1052,7 @@ function newSave() {
   ];
 }
 function save() {
+  if(!canSave)return;
   let saveData = deepCopy(player.spawnPoint);
   if (saveData[5] == Infinity) saveData[5] = "Infinity";
   localStorage.setItem("just-a-save" + diff, JSON.stringify(saveData));

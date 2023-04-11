@@ -1,6 +1,7 @@
 let diff = "normal"
 let levels = []
 let worldMap = []
+let canSave = true
 
 const authorSites =  {
  "TastyPI": "https://thetastypi.github.io/",
@@ -64,6 +65,7 @@ document.getElementById("diff-select").addEventListener("change",()=>{
 
 function loadDifficulty(d,sav=true){
  if(sav)save()
+ canSave = false
  let di = diff_index[d]
  if(!difficulties[di])throw new Error(`Difficulty "${d}" does not exist.`)
  diff = difficulties[di].save_key??("-"+difficulties[di].name)
@@ -85,4 +87,6 @@ function loadDifficulty(d,sav=true){
  document.getElementById("authors").innerHTML = atxt
  loadDiff()
  respawn(false)
+ canSave = true
+ save()
 }
